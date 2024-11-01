@@ -13,10 +13,9 @@ class Dice:
         self.state = random.getstate()
         return results
 
-
 dice = Dice(6, 2)
 results = []
-for _ in range(0, 100001):
+for _ in range(1, 100001):
     results.append(sum(dice.throw()))
 for i in range(2, 13):
     print(f'{i} выпало {results.count(i)} раз')
