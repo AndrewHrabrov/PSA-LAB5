@@ -1,7 +1,7 @@
 import random
 
 class Dice:
-    def __init__(self, count = 6, num = 1, *, seed=None):
+    def __init__(self, count = 6, num = 1, seed=None):
         random.seed(seed)
         self.state = random.getstate()
         self.bones = (count, num)
