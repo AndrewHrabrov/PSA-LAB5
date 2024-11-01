@@ -1,7 +1,7 @@
 import random
 
 class Dice:
-    def __init__(self, count = 6, num = 1, *, seed=None):
+    def __init__(self, count = 6, num = 1, seed=None):
         self.bones = (count, num)
     def throw(self):
         result = []
@@ -9,6 +9,6 @@ class Dice:
             result.append(random.randrange(1, self.bones[0]+1))
         return result
 
-for i in range(1, 1000):
+for i in range(1, 14):
     dice = Dice(count=6, num=2)
     print(dice.throw())
